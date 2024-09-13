@@ -50,7 +50,7 @@ def Find_Squares_Euler(n):
     a = 1
     test = False
     squares = 0
-    while a < math.sqrt(n)/2:
+    while a < math.sqrt(n/2):
         if math.sqrt(n-a**2) == int(math.sqrt(n-a**2)):
             if test:
                 return squares + [a, int(math.sqrt(n-a**2))]
