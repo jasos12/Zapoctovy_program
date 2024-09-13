@@ -99,6 +99,8 @@ def Euler(n):
             b = l[1]
             c = l[2]
             d = l[3]
+            if (a-c)%2 == 1:
+                (a, b) = (b, a)
             k = math.gcd(a-c, b-d)
             m = math.gcd(a+c, b+d)
             return Euler(int(k**2/4 + m**2/4)) + Euler(int(((a-c)/k)**2 + ((a+c)/m)**2))
